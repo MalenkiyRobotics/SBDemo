@@ -9,15 +9,18 @@ import org.springframework.stereotype.*;
 @SpringBootApplication
 public class DemoApplication {
 
+    private static String registeredPPP;
+
     @RequestMapping("/")
     @ResponseBody
     String home() {
-      return "Hello World!";
+      return "Get: " + registeredPPP;
     }
 
     @RequestMapping("/reg/{ppp}")
     @ResponseBody
     String test(@PathVariable String ppp) {
+      registeredPPP = ppp;
       return "Registered " + ppp;
     }
 
