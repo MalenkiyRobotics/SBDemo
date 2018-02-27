@@ -15,6 +15,12 @@ public class DemoApplication {
       return "Hello World!";
     }
 
+    @RequestMapping("/test")
+    @ResponseBody
+    String test() {
+      return "Tested!";
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
