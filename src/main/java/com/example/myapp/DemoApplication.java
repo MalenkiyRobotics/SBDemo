@@ -15,10 +15,10 @@ public class DemoApplication {
       return "Hello World!";
     }
 
-    @RequestMapping("/test")
+    @RequestMapping("/reg/{ppp}")
     @ResponseBody
-    String test() {
-      return "Tested!";
+    String test(@PathVariable String ppp) {
+      return "Registered " + ppp;
     }
 
     public static void main(String[] args) {
